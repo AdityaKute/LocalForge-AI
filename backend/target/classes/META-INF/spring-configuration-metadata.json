@@ -1,0 +1,56 @@
+{
+  "properties": {
+    "localforge": {
+      "type": "java.lang.Object",
+      "description": "Custom LocalForge configuration root."
+    },
+    "localforge.jwt": {
+      "type": "java.lang.Object",
+      "description": "JWT configuration root for LocalForge."
+    },
+    "localforge.ollama": {
+      "type": "java.lang.Object",
+      "description": "Ollama configuration root for LocalForge."
+    },
+    "localforge.fastapi": {
+      "type": "java.lang.Object",
+      "description": "FastAPI configuration root for LocalForge."
+    },
+    "localforge.model": {
+      "type": "java.lang.Object",
+      "description": "Model configuration root for LocalForge."
+    },
+    "localforge.jwt.secret": {
+      "type": "java.lang.String",
+      "description": "JWT secret used by LocalForge authentication."
+    },
+    "localforge.ollama.host": {
+      "type": "java.lang.String",
+      "description": "Ollama service host address."
+    },
+    "localforge.ollama.max-loaded-models": {
+      "type": "java.lang.Integer",
+      "description": "Maximum number of Ollama models loaded in memory."
+    },
+    "localforge.ollama.keep-alive": {
+      "type": "java.time.Duration",
+      "description": "Idle keep-alive duration for the Ollama service connection."
+    },
+    "localforge.ollama.total-vram-gb": {
+      "type": "java.lang.Integer",
+      "description": "Total VRAM available for Ollama models in gigabytes."
+    },
+    "localforge.fastapi.host": {
+      "type": "java.lang.String",
+      "description": "FastAPI bridge host URL."
+    },
+    "localforge.model.coder": {
+      "type": "java.lang.String",
+      "description": "Default code generation model."
+    },
+    "localforge.model.vision": {
+      "type": "java.lang.String",
+      "description": "Default vision model."
+    }
+  }
+}

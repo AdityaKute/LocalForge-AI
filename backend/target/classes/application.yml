@@ -1,0 +1,5 @@
+server:
+  port: ${SERVER_PORT:8081}
+localforge:
+  ollama:
+    host: ${OLLAMA_HOST:http://127.0.0.1:11434}

@@ -1,0 +1,46 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "python.pythonPath": "${workspaceFolder}\\.venv\\Scripts\\python.exe",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}\\.venv\\Lib\\site-packages"
+  ],
+  "cSpell.enabled": true,
+  "cSpell.words": [
+    "localforge",
+    "localforgeai",
+    "Ollama",
+    "ollama",
+    "FastAPI",
+    "fastapi",
+    "qwen",
+    "qwen-2.5-coder",
+    "qwen-2.5-vision",
+    "percpu",
+    "JWT",
+    "Jwts",
+    "springframework",
+    "jjwt",
+    "jsonwebtoken",
+    "driver-class-name",
+    "hibernate",
+    "open-in-view",
+    "HikariPool",
+    "LocalForgeAiApplication"
+  ],
+  "files.exclude": {
+    "**/target": true,
+    "**/.venv": true
+  },
+  "search.exclude": {
+    "**/target": true,
+    "**/.venv": true
+  },
+  "files.watcherExclude": {
+    "**/target/**": true,
+    "**/.venv/**": true
+  },
+  "yaml.validate": false,
+  "yaml.schemas": {},
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.compile.nullAnalysis.mode": "automatic"
+}

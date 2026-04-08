@@ -1,0 +1,12 @@
+com\localforgeai\config\SecurityConfig.class
+com\localforgeai\service\AiService.class
+com\localforgeai\service\OllamaService.class
+com\localforgeai\LocalForgeAiApplication.class
+com\localforgeai\exception\OllamaServiceException.class
+com\localforgeai\service\LangChainOllamaService.class
+com\localforgeai\service\AiService$1.class
+com\localforgeai\service\LangChainOllamaService$1.class
+com\localforgeai\controller\AiController.class
+com\localforgeai\dto\ModelInfo.class
+com\localforgeai\controller\GlobalExceptionHandler.class
+com\localforgeai\dto\ai\PromptRequest.class
