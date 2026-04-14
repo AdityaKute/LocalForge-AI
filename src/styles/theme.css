@@ -207,3 +207,65 @@
     line-height: 1.5;
   }
 }
+
+@layer components {
+  /* Highest specificity selector for HoverCard content */
+  [data-radix-popper-content-wrapper] .hover-css,
+  .hover-css[data-radix-hover-card-content] {
+    /* Base Styles - Light Mode */
+    background-color: var(--popover) !important;
+    color: var(--popover-foreground) !important;
+    border: 1px solid var(--border) !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3) !important;
+    z-index: 10000 !important;
+
+    /* Let Radix UI handle position, display, visibility, and opacity natively */
+  }
+
+  /* Dark mode specific intensity */
+  .dark [data-radix-popper-content-wrapper] .hover-css,
+  .dark .hover-css[data-radix-hover-card-content] {
+    background-color: rgba(12, 12, 14, 0.95) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7), 0 0 15px rgba(59, 130, 246, 0.1) !important;
+  }
+
+  /* Smooth Entrance Animation */
+  .hover-css[data-state="open"] {
+    animation: fadeIn 0.2s ease-out, zoomIn 0.2s ease-out, slideIn 0.2s ease-out !important;
+  }
+
+  /* Smooth Exit Animation */
+  .hover-css[data-state="closed"] {
+    animation: fadeOut 0.2s ease-in, zoomOut 0.2s ease-in, slideOut 0.2s ease-in !important;
+  }
+
+  /* Custom animations for better control */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+  }
+
+  @keyframes zoomIn {
+    from { transform: scale(0.95); }
+    to { transform: scale(1); }
+  }
+  @keyframes zoomOut {
+    from { transform: scale(1); }
+    to { transform: scale(0.95); }
+  }
+
+  @keyframes slideIn {
+    from { transform: translateX(8px); }
+    to { transform: translateX(0); }
+  }
+  @keyframes slideOut {
+    from { transform: translateX(0); }
+    to { transform: translateX(8px); }
+  }
+}

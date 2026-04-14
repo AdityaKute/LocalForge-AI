@@ -1,10 +1,13 @@
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\config\SecurityConfig.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\controller\AiController.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\controller\GlobalExceptionHandler.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\dto\ai\PromptRequest.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\dto\ModelInfo.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\exception\OllamaServiceException.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\LocalForgeAiApplication.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\service\AiService.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\service\LangChainOllamaService.java
-C:\Users\admin\Desktop\SIOM\SEMISTER 4\PROJECT\LocalForge AI - Copy (2)\backend\src\main\java\com\localforgeai\service\OllamaService.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\config\SecurityConfig.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\controller\AiController.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\controller\GlobalExceptionHandler.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\dto\ai\PromptRequest.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\dto\ModelInfo.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\exception\OllamaServiceException.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\LocalForgeAiApplication.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\model\Conversation.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\repository\ConversationRepository.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\service\AiService.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\service\ConversationService.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\service\LangChainOllamaService.java
+C:\Users\admin\Desktop\SIOM\SEMISTER 4\LocalForge AI v2\backend\src\main\java\com\localforgeai\service\OllamaService.java

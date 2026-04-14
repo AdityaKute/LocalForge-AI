@@ -1,19 +1,21 @@
 export interface PromptRequest {
   prompt: string;
   model: string;
-  mode: string;
-  conversationId?: string;
+  mode?: string;
 }
 
 export interface ModelInfo {
   name: string;
 }
 
-export interface ModelInfo {
-  name: string;
+export interface Conversation {
+  id: number;
+  prompt: string;
+  response: string;
 }
 
 const API_BASE = "";
+
 function buildUrl(path: string, query?: Record<string, string | number | boolean | undefined>) {
   const base = API_BASE || window.location.origin;
   const url = new URL(path, base);
@@ -43,9 +45,14 @@ async function fetchJson<T>(path: string, init?: RequestInit): Promise<T> {
   return response.json();
 }
 
-export async function fetchModels(): Promise<ModelInfo[]> {
-  console.log('Fetching models from:', buildUrl("/api/ai/models"));
-  return fetchJson<ModelInfo[]>("/api/ai/models");
+export async function getModels(): Promise<ModelInfo[]> {
+  try {
+    console.log('Fetching models from:', buildUrl("/api/ai/models"));
+    return await fetchJson<ModelInfo[]>("/api/ai/models");
+  } catch (error) {
+    console.error('Failed to fetch models:', error);
+    throw new Error(`Failed to fetch models: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
 }
 
 export async function fetchAiResponse(prompt: string, model: string, mode: string = 'summary'): Promise<string> {
@@ -65,10 +72,13 @@ export async function fetchAiResponse(prompt: string, model: string, mode: strin
   });
 
   if (!response.ok) {
-    // Read raw text first. Spring Boot default errors often omit the "message" field.
     const errorText = await response.text().catch(() => '');
     let parsed = { error: 'HTTP_ERROR', message: `HTTP ${response.status} ${response.statusText}` };
-    try { parsed = { ...parsed, ...JSON.parse(errorText) }; } catch (e) {}
+    try { 
+      parsed = { ...parsed, ...JSON.parse(errorText) }; 
+    } catch (e) {
+      // Failed to parse error response
+    }
     if (!parsed.message) {
       parsed.message = `HTTP ${response.status} ${response.statusText} (Path: /api/ollama/chat)`;
     }
@@ -79,4 +89,31 @@ export async function fetchAiResponse(prompt: string, model: string, mode: strin
   const text = await response.text();
   console.log('AI Response:', text);
   return text;
+}
+
+export async function getConversations(): Promise<Conversation[]> {
+  try {
+    return await fetchJson<Conversation[]>("/api/conversations");
+  } catch (error) {
+    console.warn('Failed to fetch conversations:', error);
+    return [];
+  }
+}
+
+export async function deleteConversation(id: number): Promise<void> {
+  const response = await fetch(buildUrl(`/api/conversations/${id}`), {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+
+  if (!response.ok) {
+    const body = await response.text().catch(() => '');
+    throw new Error(body || `Failed to delete conversation ${id}`);
+  }
+}
+
+export async function postChat(prompt: string, model: string): Promise<string> {
+  return fetchAiResponse(prompt, model);
 }

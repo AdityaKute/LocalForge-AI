@@ -13,7 +13,7 @@ export function TopBar() {
       <div className="flex items-center gap-3">
         <div
           className="p-2 rounded-lg"
-          style={{ backgroundColor: 'var(--forge-bg-tertiary)' }}
+          
         >
           <Cpu size={20} style={{ color: 'var(--forge-accent-blue)' }} />
         </div>

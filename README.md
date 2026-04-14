@@ -11,7 +11,12 @@ A powerful, locally-hosted AI chat application. LocalForge AI combines a respons
 *   ⭐ **Modern UI/UX:** Built with React and styled beautifully with modern components.
 *   ⭐ **Robust Backend:** Spring Boot architecture for reliable API routing, CORS handling, and optional MySQL conversation persistence.
 
-## 🛡️ Why LocalForge AI?
+## 🔥 What's New
+
+*   🚀 **Unified System Launcher (`LocalForgeLauncher.java`):** A brand new GUI dashboard built with Java Swing to start, manage, and monitor live logs for your Backend, Frontend, and Ollama services all from a single window!
+*   ⚡ **One-Click Start Script (`start_services.bat`):** A handy batch script that automatically cleans up hanging ports (8081, 5173, 11434), launches all required services in minimized windows, and opens your browser when everything is ready.
+
+## �️ Why LocalForge AI?
 
 In an era of cloud-based AI, **data privacy** is paramount. LocalForge AI allows you to harness the power of Large Language Models (LLMs) like Llama 3, Mistral, or Phi-3 without ever sending your sensitive data over the internet. 
 *   🔒 **100% Offline Capable:** Once models are downloaded via Ollama, no internet connection is required.

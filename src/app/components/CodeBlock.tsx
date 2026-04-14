@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Check, Copy, Maximize2, Minimize2 } from "lucide-react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { vscDarkPlus } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 interface CodeBlockProps {
   code: string;
@@ -73,19 +73,32 @@ export function CodeBlock({ code, language }: CodeBlockProps) {
 
       {/* Code */}
       <div className={`text-xs overflow-auto ${isExpanded ? 'max-h-full' : 'overflow-x-auto'}`}>
-        <SyntaxHighlighter
-          language={language}
-          style={vscDarkPlus}
-          customStyle={{
-            margin: 0,
-            padding: '1rem',
-            backgroundColor: '#0d0e16',
-            fontSize: '0.75rem',
-            lineHeight: '1.5'
-          }}
-        >
-          {code}
-        </SyntaxHighlighter>
+        {language === 'text' ? (
+          <pre
+            className="p-4 m-0 text-sm leading-relaxed whitespace-pre-wrap rounded-b-lg bg-gradient-to-br from-slate-950 via-slate-900 to-slate-800 text-transparent bg-clip-text"
+            style={{
+              fontFamily: 'var(--font-mono)',
+              backgroundImage: 'linear-gradient(135deg, #7dd3fc 0%, #c084fc 40%, #facc15 100%)',
+              textShadow: '0 0 1px rgba(15, 23, 42, 0.5)'
+            }}
+          >
+            {code}
+          </pre>
+        ) : (
+          <SyntaxHighlighter
+            language={language}
+            style={vscDarkPlus}
+            customStyle={{
+              margin: 0,
+              padding: '1rem',
+              backgroundColor: '#0d0e16',
+              fontSize: '0.75rem',
+              lineHeight: '1.5'
+            }}
+          >
+            {code}
+          </SyntaxHighlighter>
+        )}
       </div>
     </div>
   );

@@ -1,5 +1,25 @@
 server:
   port: ${SERVER_PORT:8081}
+
+spring:
+  datasource:
+    url: jdbc:h2:file:./data/localforge_ai;MODE=MySQL
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: 
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+
 localforge:
   ollama:
     host: ${OLLAMA_HOST:http://127.0.0.1:11434}
